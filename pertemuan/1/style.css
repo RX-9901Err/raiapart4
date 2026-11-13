@@ -1,0 +1,219 @@
+/* Reset dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #1b2838;
+  color: #c6d4df;
+}
+
+/* Header / Navbar */
+header {
+  background-color: #171a21;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  border-bottom: 2px solid #2a475e;
+}
+
+header .logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #66c0f4;
+  letter-spacing: 1px;
+}
+
+header nav a {
+  color: #b8b6b4;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 15px;
+  transition: color 0.2s;
+}
+
+header nav a:hover {
+  color: #ffffff;
+}
+
+.btn-login {
+  background-color: #2a475e;
+  color: #66c0f4;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-login:hover {
+  background-color: #c6d4df;
+  color: #1b2838;
+}
+
+/* Container Layout */
+.container {
+  display: flex;
+  gap: 30px;
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+/* Catalog Games */
+.game-catalog {
+  flex: 2;
+}
+
+.game-catalog h2 {
+  color: #ffffff;
+  margin-bottom: 20px;
+  font-size: 20px;
+  border-left: 4px solid #66c0f4;
+  padding-left: 10px;
+}
+
+.game-card {
+  background-color: #16202d;
+  border: 1px solid #2a475e;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.game-card:hover {
+  transform: translateY(-2px);
+  border-color: #66c0f4;
+}
+
+.game-info h3 {
+  color: #ffffff;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.game-info .category {
+  font-size: 12px;
+  color: #8f98a0;
+  margin-bottom: 8px;
+}
+
+.game-info .price {
+  color: #a4d007;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.game-card button {
+  background-color: #5c7e10;
+  color: #ffffff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.game-card button:hover {
+  background-color: #79a314;
+}
+
+/* Cart Sidebar */
+.cart-sidebar {
+  flex: 1;
+  background-color: #16202d;
+  border: 1px solid #2a475e;
+  padding: 20px;
+  border-radius: 5px;
+  height: fit-content;
+}
+
+.cart-sidebar h2 {
+  color: #ffffff;
+  font-size: 18px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #2a475e;
+  padding-bottom: 10px;
+}
+
+#daftar-keranjang {
+  list-style: none;
+  margin-bottom: 20px;
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+#daftar-keranjang li {
+  padding: 8px 0;
+  border-bottom: 1px dashed #2a475e;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+#daftar-keranjang .empty-msg {
+  color: #8f98a0;
+  font-style: italic;
+  border-bottom: none;
+}
+
+.cart-summary {
+  border-top: 2px solid #2a475e;
+  padding-top: 15px;
+}
+
+.total-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.total-price {
+  color: #a4d007;
+  font-size: 18px;
+}
+
+.btn-checkout {
+  width: 100%;
+  background-color: #2a475e;
+  color: #66c0f4;
+  border: 1px solid #66c0f4;
+  padding: 12px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 8px;
+  transition: background-color 0.2s;
+}
+
+.btn-checkout:hover {
+  background-color: #66c0f4;
+  color: #1b2838;
+}
+
+.btn-clear {
+  width: 100%;
+  background-color: transparent;
+  color: #8f98a0;
+  border: none;
+  padding: 6px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.btn-clear:hover {
+  color: #e74c3c;
+}

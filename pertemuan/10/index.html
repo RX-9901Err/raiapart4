@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Movie Finder</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      background: #141414;
+      color: white;
+      text-align: center;
+      padding: 30px;
+    }
+
+    input {
+      padding: 12px;
+      width: 250px;
+      border-radius: 8px;
+      border: none;
+    }
+
+    button {
+      padding: 12px;
+      background: red;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    #hasil {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .film {
+      background: #222;
+      padding: 15px;
+      width: 200px;
+      border-radius: 10px;
+    }
+
+    .film img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    /* Warna kategori */
+    .bagus {
+      color: #00ff88;
+    }
+
+    .lumayan {
+      color: yellow;
+    }
+
+    .biasa {
+      color: orange;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>🎬 Movie Finder</h1>
+
+  <p>Cari film atau serial favoritmu!</p>
+
+  <input
+    type="text"
+    id="search"
+    placeholder="Masukkan judul..."
+  >
+
+  <button onclick="cariFilm()">Cari</button>
+
+  <div id="hasil"></div>
+
+  <script>
+
+    async function cariFilm() {
+
+      // 1. Mengambil input user
+      let keyword = document.getElementById("search").value;
+
+      // 2. Mengambil tempat hasil
+      let hasil = document.getElementById("hasil");
+
+      if (keyword.trim() === "") {
+        hasil.textContent = "Masukkan judul terlebih dahulu!";
+        return;
+      }
+
+      // 3. Menampilkan loading
+      hasil.textContent = "Loading...";
+
+      try {
+
+        // 4. Mengambil data dari API
+        let response = await fetch(
+          "https://api.tvmaze.com/search/shows?q="
+          + encodeURIComponent(keyword)
+        );
+
+        if (!response.ok) {
+          throw new Error("Gagal mengambil data");
+        }
+
+        // 5. Mengubah response menjadi JSON
+        let data = await response.json();
+
+        // 6. Mengosongkan hasil
+        hasil.innerHTML = "";
+
+        // 7. Mengecek data
+        if (data.length === 0) {
+          hasil.textContent = "Film tidak ditemukan!";
+          return;
+        }
+
+        // 8. Menampilkan semua film
+        data.forEach(function(item) {
+
+          let film = item.show;
+
+          // Mengambil poster
+          let poster = film.image
+            ? film.image.medium
+            : "https://placehold.co/200x250?text=No+Poster";
+
+          // Mengambil rating
+          let rating = film.rating?.average ?? "Belum ada";
+
+          // 9. Menentukan kategori berdasarkan rating
+          let kategori;
+          let warna;
+
+          if (rating === "Belum ada") {
+            kategori = "❓ Belum Dinilai";
+            warna = "";
+          } else if (rating >= 8) {
+            kategori = "🔥 Film Bagus";
+            warna = "bagus";
+          } else if (rating >= 6) {
+            kategori = "👍 Lumayan";
+            warna = "lumayan";
+          } else {
+            kategori = "😐 Biasa Saja";
+            warna = "biasa";
+          }
+
+          // 10. Membuat card film
+          let card = document.createElement("div");
+          card.className = "film";
+
+          // Membuat gambar
+          let gambar = document.createElement("img");
+          gambar.src = poster;
+          gambar.alt = film.name;
+
+          // Membuat judul
+          let judul = document.createElement("h3");
+          judul.textContent = film.name;
+
+          // Membuat rating
+          let nilai = document.createElement("p");
+          nilai.textContent = "⭐ Rating: " + rating;
+
+          // Membuat kategori
+          let status = document.createElement("p");
+          status.textContent = kategori;
+          status.className = warna;
+
+          // 11. Menampilkan ke website
+          card.append(gambar, judul, nilai, status);
+
+          hasil.appendChild(card);
+
+        });
+
+      } catch (error) {
+        hasil.textContent = "Terjadi kesalahan. Coba lagi!";
+        console.error(error);
+      }
+
+    }
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz Battle</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <div class="quiz-card">
+      <header class="quiz-header">
+        <h1>⚔️ Quiz Battle</h1>
+
+        <div class="status">
+          <span id="score">Score: 0</span>
+          <span id="progress">Question: 1/5</span>
+        </div>
+      </header>
+
+      <section id="gameScreen">
+        <h2 id="question">Question</h2>
+        <div id="answerContainer" class="answers"></div>
+        <p id="feedback"></p>
+      </section>
+
+      <section id="resultScreen" class="hidden">
+        <h2>🏆 Battle Finished!</h2>
+        <p id="finalScore"></p>
+        <button id="restartButton">🔄 Play Again</button>
+      </section>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

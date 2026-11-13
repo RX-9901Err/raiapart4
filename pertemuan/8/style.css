@@ -1,0 +1,107 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+
+  font-family: Arial, sans-serif;
+
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #667eea;
+}
+
+.container {
+  width: 90%;
+  max-width: 600px;
+}
+
+.quote-card {
+  background: white;
+
+  padding: 40px;
+
+  border-radius: 20px;
+
+  text-align: center;
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  margin-top: 0;
+}
+
+#quote {
+  font-size: 24px;
+  line-height: 1.5;
+
+  margin: 30px 0 10px;
+}
+
+
+
+#author {
+  color: #777;
+
+  margin-bottom: 30px;
+}
+
+.actions {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 10px;
+}
+
+button {
+  border: none;
+
+  padding: 12px 20px;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  font-size: 16px;
+}
+
+#randomButton {
+  background: #667eea;
+
+  color: white;
+}
+
+#copyButton {
+  background: #eee;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  color: #667eea;
+}
+#randomButton:hover {
+  background: #5a67d8;
+  color: rgb(10, 38, 224);
+}
+#copyButton:hover {
+  background: #ddd;
+  color: #1639d7;
+}
+#alert {
+  margin-top: 20px;
+
+  color: green;
+
+  font-weight: bold;
+
+  text-align: center;
+}
