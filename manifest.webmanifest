@@ -1,0 +1,32 @@
+{
+  "name": "Raiplem Portfolio",
+  "short_name": "Raiplem",
+  "description": "Explore Raiplem's selected web projects and creative work.",
+  "start_url": "./rizal.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#F5F5F2",
+  "theme_color": "#F5F5F2",
+  "orientation": "any",
+  "categories": ["portfolio", "design"],
+  "icons": [
+    {
+      "src": "./assets/app-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./assets/app-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./assets/app-icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

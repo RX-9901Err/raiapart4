@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Raiplem's portfolio of selected web projects and creative work." />
+  <meta name="theme-color" content="#F5F5F2" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Raiplem" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta property="og:title" content="Raiplem Portfolio" />
+  <meta property="og:description" content="Explore Raiplem's selected web projects and creative work." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://raiapart4.vercel.app/" />
+  <meta property="og:image" content="https://raiapart4.vercel.app/assets/app-icon-512.png" />
+  <link rel="canonical" href="https://raiapart4.vercel.app/rizal.html" />
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="icon" type="image/png" sizes="192x192" href="./assets/app-icon-192.png" />
+  <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png" />
+  <title>Raiplem Portfolio</title>
+
+  <!-- Google Fonts: Anton (Display), Inter (Body), IBM Plex Mono (Technical) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Top Hairline Reading Progress Bar -->
+  <div class="scroll-indicator" aria-hidden="true"></div>
+
+  <!-- =========================================================
+       00 / HEADER & 3D ROLLING NAVIGATION
+       ========================================================= -->
+  <header class="site-header" id="top">
+    <div class="container header-grid">
+      <a href="#top" class="monogram" aria-label="Home">
+        R
+      </a>
+
+      <nav class="site-nav" aria-label="Primary Navigation">
+        <a href="#philosophy" class="nav-link">
+          <span class="mono-num">01</span>
+          <span class="roll-text" data-text="Approach">Approach</span>
+        </a>
+        <a href="#work" class="nav-link">
+          <span class="mono-num">02</span>
+          <span class="roll-text" data-text="Selected Work">Selected Work</span>
+        </a>
+        <a href="#about" class="nav-link">
+          <span class="mono-num">03</span>
+          <span class="roll-text" data-text="About">About</span>
+        </a>
+        <a href="#contact" class="nav-link">
+          <span class="mono-num">04</span>
+          <span class="roll-text" data-text="Contact">Contact</span>
+        </a>
+      </nav>
+
+      <div class="status-badge">
+        <span class="status-dot" aria-hidden="true"></span>
+        <span class="meta-label">STATUS: PORTFOLIO ONLINE</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- =========================================================
+         HERO SECTION + 3D ARCHITECTURAL WIREFRAME STAGE
+         ========================================================= -->
+    <section class="hero section-border">
+      <canvas id="hero-3d-canvas" class="hero-3d-stage" aria-hidden="true"></canvas>
+
+      <div class="container">
+        <div class="hero-meta-row reveal">
+          <span class="meta-label">WEB · INTERACTIVE · DIGITAL PROJECTS</span>
+          <span class="meta-label">DESIGN &amp; FRONTEND EXPERIMENTS</span>
+          <span class="meta-label">EDITION 2026</span>
+        </div>
+
+        <h1 class="hero-headline reveal">
+          RAIPLEM<br />
+          PORTFOLIO<br />
+        </h1>
+
+        <div class="hero-footer-grid reveal">
+          <div class="hero-spacer"></div>
+          <div class="hero-intro">
+            <p class="lead-text">
+              A collection of web interfaces, interactive experiments, and digital tools —
+              built to be clear, responsive, and enjoyable to use.
+            </p>
+            <div class="hero-actions">
+              <a href="#work" class="editorial-cta">
+                <span>EXPLORE INDEX</span>
+                <span aria-hidden="true">↓</span>
+              </a>
+              <a href="#contact" class="editorial-cta secondary">
+                <span>INITIATE DIALOGUE</span>
+                <span aria-hidden="true">→</span>
+              </a>
+              <button id="install-app-button" class="editorial-cta secondary install-app-button" type="button">
+                <span>INSTALL APP</span>
+                <span aria-hidden="true">↓</span>
+              </button>
+              <p id="install-app-status" class="install-app-status" role="status" aria-live="polite"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         01 / PHILOSOPHY & APPROACH
+         ========================================================= -->
+    <section id="philosophy" class="section section-border">
+      <div class="container editorial-split">
+        <div class="section-index reveal">
+          <span class="meta-label">01 / APPROACH</span>
+        </div>
+
+        <div class="section-content">
+          <blockquote class="manifesto-statement reveal">
+            “Good digital work should feel clear, considered, and rewarding to use.”
+          </blockquote>
+
+          <div class="principles-grid reveal">
+            <article class="principle-item">
+              <span class="meta-label">PRINCIPLE I</span>
+              <h2 class="sub-heading">Clarity Over Noise</h2>
+              <p class="body-text">
+                Each screen and interaction should make the next step easy to understand.
+              </p>
+            </article>
+
+            <article class="principle-item">
+              <span class="meta-label">PRINCIPLE II</span>
+              <h2 class="sub-heading">Systems Thinking</h2>
+              <p class="body-text">
+                Design, content, and behavior work together as one consistent experience.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         02 / SELECTED WORK (TACTILE 3D PROJECT PLATES)
+         ========================================================= -->
+    <section id="work" class="section section-border">
+      <div class="container">
+        <div class="section-header-row reveal">
+          <span class="meta-label">02 / SELECTED WORK</span>
+          <a
+            href="./pertemuan/"
+            class="meta-label lesson-index-link"
+          >
+            [09] LESSONS ↗
+          </a>
+        </div>
+
+        <div class="lesson-grid">
+          <article class="lesson-card reveal">
+            <div class="lesson-preview" data-3d-tilt>
+              <iframe src="./pertemuan/1/" title="Preview of Pertemuan 1: Game Store" loading="lazy" sandbox="allow-scripts" tabindex="-1" aria-hidden="true"></iframe>
+              <span class="lesson-preview-label meta-label">LIVE PREVIEW</span>
+            </div>
+            <a class="lesson-card-link" href="./pertemuan/1/">
+              <span class="meta-label">PERTEMUAN 01</span>
+              <span class="lesson-card-title">Game Store</span>
+              <span class="lesson-card-arrow" aria-hidden="true">↗</span>
+            </a>
+          </article>
+          <article class="lesson-card reveal">
+            <div class="lesson-preview" data-3d-tilt>
+              <iframe src="./pertemuan/2/" title="Preview of Pertemuan 2: Jaga Bumi" loading="lazy" sandbox="allow-scripts" tabindex="-1" aria-hidden="true"></iframe>
+              <span class="lesson-preview-label meta-label">LIVE PREVIEW</span>
+            </div>
+            <a class="lesson-card-link" href="./pertemuan/2/">
+              <span class="meta-label">PERTEMUAN 02</span>
+              <span class="lesson-card-title">Jaga Bumi</span>
+              <span class="lesson-card-arrow" aria-hidden="true">↗</span>
+            </a>
+          </article>
+          <article class="lesson-card reveal">
+            <div class="lesson-preview" data-3d-tilt>
+              <iframe src="./pertemuan/3/" title="Preview of Pertemuan 3: Mykhalo" loading="lazy" sandbox="allow-scripts" tabindex="-1" aria-hidden="true"></iframe>
+              <span class="lesson-preview-label meta-label">LIVE PREVIEW</span>
+            </div>
+            <a class="lesson-card-link" href="./pertemuan/3/">
+              <span class="meta-label">PERTEMUAN 03</span>
+              <span class="lesson-card-title">Mykhalo</span>
+              <span class="lesson-card-arrow" aria-hidden="true">↗</span>
+            </a>
+          </article>
+          <article class="lesson-card reveal">
+            <div class="lesson-preview" data-3d-tilt>
+              <iframe src="./pertemuan/4/" title="Preview of Pertemuan 4: Game Keren" loading="lazy" sandbox="allow-scripts" tabindex="-1" aria-hidden="true"></iframe>
+              <span class="lesson-preview-label meta-label">LIVE PREVIEW</span>
+            </div>
+            <a class="lesson-card-link" href="./pertemuan/4/">
+              <span class="meta-label">PERTEMUAN 04</span>
+              <span class="lesson-card-title">Game Keren</span>
+              <span class="lesson-card-arrow" aria-hidden="true">↗</span>
+            </a>
+          </article>
+          <article class="lesson-card reveal">
+            <div class="lesson-preview" data-3d-tilt>
+              <iframe src="./pertemuan/6/" title="Preview of Pertemuan 6" loading="lazy" sandbox="allow-scripts" tabindex="-1" aria-hidden="true"></iframe>
+              <span class="lesson-preview-label meta-label">LIVE PREVIEW</span>
+            </div>
+            <a class="lesson-card-link" href="./pertemuan/6/">
+              <span class="meta-label">PERTEMUAN 06</span>
+              <span class="lesson-card-title">Supabase Notes</span>
+              <span class="lesson-card-arrow" aria-hidden="true">↗</span>
+            </a>
+          </article>
+          <article class="lesson-card reveal">
+            <div class="lesson-preview" data-3d-tilt>
+              <iframe src="./pertemuan/7/" title="Preview of Pertemuan 7: Guess The Number" loading="lazy" sandbox="allow-scripts" tabindex="-1" aria-hidden="true"></iframe>
+              <span class="lesson-preview-label meta-label">LIVE PREVIEW</span>
+            </div>
+            <a class="lesson-card-link" href="./pertemuan/7/">
+              <span class="meta-label">PERTEMUAN 07</span>
+              <span class="lesson-card-title">Guess The Number</span>
+              <span class="lesson-card-arrow" aria-hidden="true">↗</span>
+            </a>
+          </article>
+          <article class="lesson-card reveal">
+            <div class="lesson-preview" data-3d-tilt>
+              <iframe src="./pertemuan/8/" title="Preview of Pertemuan 8: Random Quote" loading="lazy" sandbox="allow-scripts" tabindex="-1" aria-hidden="true"></iframe>
+              <span class="lesson-preview-label meta-label">LIVE PREVIEW</span>
+            </div>
+            <a class="lesson-card-link" href="./pertemuan/8/">
+              <span class="meta-label">PERTEMUAN 08</span>
+              <span class="lesson-card-title">Random Quote</span>
+              <span class="lesson-card-arrow" aria-hidden="true">↗</span>
+            </a>
+          </article>
+          <article class="lesson-card reveal">
+            <div class="lesson-preview" data-3d-tilt>
+              <iframe src="./pertemuan/9/" title="Preview of Pertemuan 9: Quiz Battle" loading="lazy" sandbox="allow-scripts" tabindex="-1" aria-hidden="true"></iframe>
+              <span class="lesson-preview-label meta-label">LIVE PREVIEW</span>
+            </div>
+            <a class="lesson-card-link" href="./pertemuan/9/">
+              <span class="meta-label">PERTEMUAN 09</span>
+              <span class="lesson-card-title">Quiz Battle</span>
+              <span class="lesson-card-arrow" aria-hidden="true">↗</span>
+            </a>
+          </article>
+          <article class="lesson-card reveal">
+            <div class="lesson-preview" data-3d-tilt>
+              <iframe src="./pertemuan/10/" title="Preview of Pertemuan 10: Movie Finder" loading="lazy" sandbox="allow-scripts" tabindex="-1" aria-hidden="true"></iframe>
+              <span class="lesson-preview-label meta-label">LIVE PREVIEW</span>
+            </div>
+            <a class="lesson-card-link" href="./pertemuan/10/">
+              <span class="meta-label">PERTEMUAN 10</span>
+              <span class="lesson-card-title">Movie Finder</span>
+              <span class="lesson-card-arrow" aria-hidden="true">↗</span>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         03 / ABOUT & CAPABILITIES
+         ========================================================= -->
+    <section id="about" class="section section-border">
+      <div class="container editorial-split">
+        <div class="section-index reveal">
+          <span class="meta-label">03 / PROFILE</span>
+        </div>
+
+        <div class="section-content">
+          <div class="about-bio-grid reveal">
+            <div>
+              <h2 class="section-display-title">BACKGROUND</h2>
+              <p class="body-text">
+                Raiplem is a personal portfolio of web interfaces, storefronts, small tools, and game experiments.
+              </p>
+              <p class="body-text">
+                The projects explore how thoughtful design and practical code can turn ideas into engaging experiences.
+              </p>
+            </div>
+
+            <div class="capabilities-table">
+              <div class="cap-row">
+                <span class="meta-label">DISCIPLINES</span>
+                <span class="cap-value">Web interfaces, frontend, interactive experiences</span>
+              </div>
+              <div class="cap-row">
+                <span class="meta-label">TOOLS & STACK</span>
+                <span class="cap-value">HTML, CSS, JavaScript</span>
+              </div>
+              <div class="cap-row">
+                <span class="meta-label">EXPERIENCE</span>
+                <span class="cap-value">Independent and course projects</span>
+              </div>
+              <div class="cap-row">
+                <span class="meta-label">PROJECT FOCUS</span>
+                <span class="cap-value">Storefronts, games, and digital experiments</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         04 / CONTACT (DARK SURFACE CONTRAST BAND)
+         ========================================================= -->
+    <section id="contact" class="section contact-band">
+      <div class="container editorial-split">
+        <div class="section-index reveal">
+          <span class="meta-label">04 / INQUIRIES</span>
+        </div>
+
+        <div class="section-content reveal">
+          <h2 class="contact-headline">
+            LET’S BUILD SOMETHING<br />
+            WITH INTENTION.
+          </h2>
+
+          <div class="contact-grid">
+            <div>
+              <span class="meta-label">PUBLIC PROFILE</span>
+              <a href="https://github.com/RX-9901Err" class="contact-email" target="_blank" rel="noopener noreferrer">
+                GitHub ↗
+              </a>
+            </div>
+
+            <div>
+              <span class="meta-label">EXPLORE THE WORK</span>
+              <ul class="social-list">
+                <li>
+                  <a href="./pertemuan/" class="nav-link">
+                    <span class="roll-text" data-text="Project index ↗">Project index ↗</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================
+       FOOTER
+       ========================================================= -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="monogram">R</div>
+      <div class="meta-label">© 2026 RAIPLEM. ALL RIGHTS RESERVED.</div>
+      <div class="meta-label">SET IN ANTON, INTER & IBM PLEX MONO</div>
+      <a href="#top" class="nav-link meta-label">
+        <span class="roll-text" data-text="BACK TO TOP ↑">BACK TO TOP ↑</span>
+      </a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
